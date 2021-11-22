@@ -84,14 +84,26 @@ body {
   
 }
 /* <!-- ссылки в шапке сайта  --> */
+
+
 .site-nav{
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   margin-left: 93px;
+
 }
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
 }
 
+
+.item > .nav-link{
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: relative;
+}
 
 .nav-link {
   color: var(--main-title-color);
@@ -107,6 +119,22 @@ body {
 }
 .current {
   color: var(--accent-color);
+}
+
+.current::after{
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: -2px;
+
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px ;
+  background-color: var(--accent-color);
+
+
 }
 /* Почта и телефон */
 .contacts{
