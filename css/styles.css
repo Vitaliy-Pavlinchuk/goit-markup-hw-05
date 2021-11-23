@@ -656,8 +656,44 @@ margin: 0 0 4px 0;
   transition-property:box-shadow;
   transition-duration: var(--tr-duration);
   transition-timing-function: var(--timing-function);
+
 }
 
-.cart-work:hover{
+.cart-work:hover, .cart-work:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+/****** анимация синего всплывающие окна ******/
+.card-aside{
+  position: relative;
+  overflow: hidden;
+}
+
+.product-overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+  width: 100%;
+  height: 100%;
+  background-color:  rgba(33, 150, 243, 0.9); 
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: var(--tr-duration);
+  transition-timing-function: var(--timing-function);
+  
+  padding: 63px 24px;
+  margin: 0;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+
+  color:var(--current-white-color);
+}
+
+.cart-work:hover .product-overlay, .cart-work:focus .product-overlay{
+  transform: translateY(0px);
+}
+
+
+
